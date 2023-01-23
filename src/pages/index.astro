@@ -4,11 +4,43 @@ import Header from "../components/Header.astro";
 import Hero from "../components/Hero.astro";
 import Features from "../components/Features.astro";
 import Card from "../components/Card.astro";
+import Tabs from "../components/Tabs.astro";
 import Footer from "../components/Footer.astro";
 ---
 
 <Layout>
 	<Hero />
 	<Features />
+	<Tabs
+		headings={["ANALYSIS", "DESIGN", "ARCHITECTURE", "CODE"]}
+		contents={[
+			"I help you make sense of your business problem",
+			"I design with my team solutions that compliment our analysis efforts",
+			"We reccomend and ensure a future-proof and robust Architecture, aligned to the business",
+			"We provide the Code and implement the solution",
+		]}
+	/>
+
+	<section class="page-content">
+		<div class="page-container">
+			<h2>Get Started With Astro</h2>
+			<p>
+				Get a new Astro project up and running locally with our helpful
+				create-astro CLI wizard!
+			</p>
+
+			<h3>Start Building</h3>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+				ipsum deserunt inventore ut voluptate, officia maiores repellat
+				tenetur praesentium omnis est ex tempora a necessitatibus
+				reiciendis at et dignissimos. Ipsam eius consequuntur cupiditate
+				aperiam porro, esse laborum impedit nesciunt ut voluptatum
+				assumenda aspernatur libero iusto error molestias dolorum,
+				necessitatibus labore?
+			</p>
+		</div>
+	</section>
+
 	<Footer />
 </Layout>
