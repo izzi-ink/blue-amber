@@ -18,7 +18,7 @@ const featuresData = [
 ---
 
 <section class="features">
-  <div class="container">
+  <div class="card-container">
     {
       featuresData.map((feature) => (
         <Card>
@@ -31,7 +31,7 @@ const featuresData = [
 </section>
 
 <style>
-  .features .container {
+  .features .card-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
@@ -40,7 +40,7 @@ const featuresData = [
   }
 
   @media (max-width: 500px) {
-    .features .container {
+    .features .card-container {
       grid-template-columns: 1fr;
     }
   }

@@ -1,8 +1,5 @@
 # Welcome to [Izzi Ink](https://izzi.ink)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-> 🧑‍🚀 **Rookie Astronaut?** Read and Learn how to do this with Astro, HTML and CSS and JS.
-
 ## 🚀 Project Structure
 
 Inside of your Astro project, you'll see the following folders and files:
