@@ -1,10 +1,7 @@
 # Welcome to [Izzi Ink](https://izzi.ink)
 
 > 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-> 🧑‍🚀 **Seasoned astronaut?** Read and Learn how to do this with Astro, HTML and CSS and JS.
-
-![basics](../blue-amber/src/assets/astro-izzi-blog.png)
-
+> 🧑‍🚀 **Rookie Astronaut?** Read and Learn how to do this with Astro, HTML and CSS and JS.
 
 ## 🚀 Project Structure
 
