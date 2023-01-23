@@ -1,0 +1,57 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import Features from "../components/Features.astro";
+import Footer from "../components/Footer.astro";
+
+const {
+    heading = "About",
+    subheading = "Who is Izzi Ink?",
+    bodycopy = "I enable software engineering teams, to succeed at building future-friendly products that customers love.",
+    copyA = "I am versatile, with more than two decades’ experience in analysis, software design and software engineering.",
+    copyB = "I understand the influence software architecture and design have on systems and people and am excited to explore the impact of AI and Machine Learning on Design and Design Operations. My skillset, strengths and values assist organisations, their design and engineering teams to implement and develop products at scale.",
+
+    showExtra = false,
+} = Astro.props as Props;
+---
+
+<Layout title="About Izzi Ink">
+    <div class="hero">
+        <div class="main-story">
+            <!-- main story must get padding etc. -->
+            <!-- main story card goes here -->
+            <h1>{heading}</h1>
+            <h2>{subheading}</h2>
+            <p>
+                {bodycopy}
+            </p>
+            <p>
+                {copyA}
+            </p>
+            <p>
+                {copyB}
+            </p>
+        </div>
+    </div>
+
+    <Features />
+    <Footer />
+</Layout>
+<style>
+    .page-content {
+        display: flex;
+        background-color: #f5f5f5;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .hero {
+        background-color: #f5f5f5;
+    }
+    .main-story {
+        background-color: rgb(79, 79, 79);
+        padding: 2rem 2rem 4rem 2rem;
+        width: 100%;
+    }
+</style>
