@@ -5,7 +5,7 @@ import logo from "../images/logo.svg";
 <header class="header">
     <nav class="navbar">
         <a href="#" class="nav-logo"> <img src={logo} alt="" /></a>
-        <ul class="nav-menu">
+        <ul class="nav-menu" id="menu">
             <li class="nav-item">
                 <a href="./about/about.html" class="nav-link">About</a>
             </li>
@@ -44,4 +44,18 @@ import logo from "../images/logo.svg";
         hamburger.classList.remove("active");
         navMenu.classList.remove("active");
     }
+    // Hide navbar on scroll down
+    let myComponent = document.getElementById("menu");
+    let scrolling = false;
+
+    window.addEventListener("scroll", function () {
+        if (!scrolling) {
+            scrolling = true;
+            myComponent.style.display = "none";
+            setTimeout(() => {
+                scrolling = false;
+                myComponent.style.display = "flex";
+            }, 2000);
+        }
+    });
 </script>

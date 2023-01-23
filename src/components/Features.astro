@@ -3,16 +3,16 @@ import Card from "./Card.astro";
 
 const featuresData = [
   {
-    title: "Zero JavaScript Runtime",
-    body: " Astro renders HTML on the server and strips away any remaining, unused JavaScript.",
+    title: "Doodles Matter",
+    body: " Simpler is often better. If we can understand an idea on a paper napkin, we can certainly figure it out in code. Doodles don't cost anything, so we use them to explore and experiment.",
   },
   {
-    title: "The Power of Islands",
-    body: " Need interactive UI? Load individual, non-blocking component islands in parallel.",
+    title: "Drawn to perfection",
+    body: " We carefully vet and cross-check our solutions at every step of the process, from rough doodles to more polished drawings and well-defined concepts. We ensure that we map out the journey we take.",
   },
   {
-    title: "Lazy-Loading Islands",
-    body: "Components only hydrate when they scroll into view. If you don't see it, Astro won't load it.",
+    title: "Words have Power",
+    body: "Just as code shape the world around us, our words shape our thoughts, our actions, and our world. We take care to craft our words with care and precision.",
   },
 ];
 ---
@@ -22,7 +22,7 @@ const featuresData = [
     {
       featuresData.map((feature) => (
         <Card>
-          <h3>{feature.title}</h3>
+          <h2>{feature.title}</h2>
           <p>{feature.body}</p>
         </Card>
       ))
@@ -37,6 +37,7 @@ const featuresData = [
     grid-gap: 20px;
     padding: 0 20px;
     margin: 30px auto;
+    color: #000;
   }
 
   @media (max-width: 500px) {
