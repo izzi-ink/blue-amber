@@ -94,6 +94,20 @@ h3 {
   /* identical to box height, or 112% */
 }
 
+strong {
+  /* hero xl */
+  /* h2 / xl */
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1rem;
+  padding-left: 2rem;
+  color: #D7CCC8;
+  /* identical to box height, or 112% */
+}
+
 p {
 
   display: inline-block;
