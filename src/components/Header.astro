@@ -3,62 +3,50 @@ import logo from "../images/logo.svg";
 ---
 
 <header class="header">
-    <nav class="navbar">
-        <a href="/" class="nav-logo"> <img src={logo} alt="" /></a>
-        <ul class="nav-menu" id="menu">
-            <li class="nav-item">
-                <a href="../" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item">
-                <a href="../about/" class="nav-link">About</a>
-            </li>
-            <li class="nav-item">
-                <a href="../blog" class="nav-link">Blog</a>
-            </li>
-            <li class="nav-item">
-                <a href="#contact" class="nav-link">Contact Us</a>
-            </li>
-        </ul>
-        <!-- icon burger bar -->
-        <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+    <div class="container">
+        <div class="logo">
+            <a href="/">
+                <img src={logo} alt="" />
+            </a>
         </div>
-    </nav>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/blog">Blog</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
-<script>
-    console.log("Hello I am seen in the console");
-    const hamburger = document.querySelector(".hamburger");
-    const navMenu = document.querySelector(".nav-menu");
-
-    hamburger.addEventListener("click", mobileMenu);
-
-    function mobileMenu() {
-        hamburger.classList.toggle("active");
-        navMenu.classList.toggle("active");
+<style>
+    .header {
+        height: 70px;
+        background: var(--color-primary);
     }
-    const navLink = document.querySelectorAll(".nav-link");
 
-    navLink.forEach((n) => n.addEventListener("click", closeMenu));
-
-    function closeMenu() {
-        hamburger.classList.remove("active");
-        navMenu.classList.remove("active");
+    .header .container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
     }
-    // Hide navbar on scroll down
-    let myComponent = document.getElementById("menu");
-    let scrolling = false;
 
-    window.addEventListener("scroll", function () {
-        if (!scrolling) {
-            scrolling = true;
-            myComponent.style.display = "none";
-            setTimeout(() => {
-                scrolling = false;
-                myComponent.style.display = "flex";
-            }, 2000);
-        }
-    });
-</script>
+    .header img {
+        height: 35px;
+        vertical-align: middle;
+    }
+
+    .header nav ul {
+        display: flex;
+    }
+
+    .header nav ul li {
+        padding: 0 10px;
+    }
+
+    .header nav ul li a {
+        color: #fff;
+    }
+</style>
