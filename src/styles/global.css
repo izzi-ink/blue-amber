@@ -248,7 +248,7 @@ p {
 
 /* at smaller screens this must perhaps be flex */
 .articles {
-  border: magenta 7px solid;
+
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -349,7 +349,6 @@ p {
 
   .hero {
     grid-area: hero;
-    background-color: #562cc2;
     display: flex;
     flex-direction: column;
     background-image: none;
@@ -435,6 +434,7 @@ p {
     flex-direction: column;
     grid-area: articles;
     background-color: #282828;
+
   }
 
   .main-story {
@@ -512,7 +512,6 @@ p {
   .articles {
     display: flex;
     flex-direction: column;
-    border: magenta 2px solid;
     grid-area: features;
     background-color: #282828;
   }
