@@ -20,16 +20,14 @@ const { Content, frontmatter } = Astro.props.post;
 
 <Layout title={frontmatter.title}>
   <section class="page-content">
-    <div class="blog-container">
+    <div class="blog">
       <Card>
         <a class="btn" href="/blog">Go Back</a>
         <h2>{frontmatter.title}</h2>
         <div>
-          <strong
-            >{frontmatter.author} on {
-              new Date(frontmatter.date).toLocaleDateString()
-            }
-          </strong>
+          <strong>Written by {frontmatter.author}</strong> on {
+            new Date(frontmatter.date).toLocaleDateString()
+          }
         </div>
         <Content />
       </Card>
@@ -37,17 +35,7 @@ const { Content, frontmatter } = Astro.props.post;
   </section>
 </Layout>
 <style>
-  .blog-container {
-    max-width: 75%;
-    margin: 0 auto;
-    padding: 0 30px;
-  }
-
-  .blog-container a {
-    color: beige;
-  }
-
-  .card blog-card {
-    background-color: var(--ranger);
+  .card strong {
+    padding-left: 2rem;
   }
 </style>

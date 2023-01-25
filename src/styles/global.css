@@ -117,7 +117,6 @@ p {
   font-weight: normal;
   font-size: 1rem;
   line-height: 1.5rem;
-  color: #FFFFFF;
   padding-left: 2rem;
   padding-right: 2rem;
 }
@@ -227,6 +226,7 @@ p {
   justify-content: space-between;
   width: 40rem;
   background-color: #2e2e2e;
+  color: var(--sand);
   padding: 2rem 2rem 2rem 2rem;
   margin: -1rem;
   border-color: #ffffff;
@@ -241,6 +241,7 @@ p {
 .character {
   border: magenta 0px solid;
   grid-area: character;
+  padding-left: 2rem;
   /* align-self: flex-end; */
 
 }
@@ -368,6 +369,29 @@ p {
   }
 }
 
+.blog {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.btn {
+  display: inline-block;
+  margin: 0 0.5rem 0.5rem 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  background: #333;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.logos-small {
+  display: none;
+}
+
 /* Page Content */
 .page-content {
   margin: 20px 0;
@@ -384,12 +408,6 @@ p {
 
 .page-content h3 {
   font-size: 25px;
-}
-
-.page-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 30px;
 }
 
 /* 1. mobile devices */
