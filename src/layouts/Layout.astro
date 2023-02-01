@@ -6,6 +6,7 @@ export interface Props {
 }
 
 const { title = `Izzi Ink Astronaut ` } = Astro.props as Props;
+import { SEO } from "astro-seo";
 ---
 
 <!DOCTYPE html>
@@ -26,29 +27,33 @@ const { title = `Izzi Ink Astronaut ` } = Astro.props as Props;
 			name="description"
 			content="I am a Solutions Architect with a focus on Front-end Technology and Design. I help teams to design and build future-friendly products that customers love."
 		/>
-		<!-- Facebook Meta Tags -->
-		<meta property="og:url" content="https://izzi.ink/" />
-		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Izzi Ink Astronaut " />
-		<meta
-			property="og:description"
-			content="I am a Solutions Architect with a focus on Front-end Technology and Design. I help teams to design and build future-friendly products that customers love."
-		/>
-		<meta
-			property="og:image"
-			content="https://izzi.ink/assets/opengraph/izzi-ink-preview.png"
-		/>
 
-		<!-- Twitter Meta Tags -->
-		<meta name="twitter:card" content="summary_large_image" />
-		<meta property="twitter:domain" content="izzi.ink" />
-		<meta property="twitter:url" content="https://izzi.ink/" />
-		<meta name="twitter:title" content="Izzi Ink Astronaut " />
-		<meta
-			name="twitter:description"
-			content="I am a Solutions Architect with a focus on Front-end Technology and Design. I help teams to design and build future-friendly products that customers love."
+		<SEO
+			title="Izzi Ink Astronaut"
+			description="I am a Solutions Architect with a focus on Front-end Technology and Design. I help teams to design and build future-friendly products that customers love."
+			canonical="https://www.izzink.com"
+			image="https://www.izzink.com/images/izzi-ink-preview.png"
+			twitter={{
+				creator: "@jonasmerlins1",
+			}}
+			extend={{
+				// extending the default link tags
+				link: [{ rel: "icon", href: "/favicon.ico" }],
+				// extending the default meta tags
+				meta: [
+					{
+						name: "twitter:image",
+						content:
+							"https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+					},
+					{
+						name: "twitter:title",
+						content: "Tinker Tailor Soldier Spy",
+					},
+					{ name: "twitter:description", content: "Agent" },
+				],
+			}}
 		/>
-		<meta name="twitter:image" content="../images/izzi-ink-preview.png" />
 	</head>
 	<body>
 		<Header />
