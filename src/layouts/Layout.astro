@@ -6,7 +6,6 @@ export interface Props {
 }
 
 const { title = `Izzi Ink Astronaut ` } = Astro.props as Props;
-import { SEO } from "astro-seo";
 ---
 
 <!DOCTYPE html>
@@ -15,6 +14,17 @@ import { SEO } from "astro-seo";
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			property="og:image"
+			content="https://izzi.ink/izzi-ink-preview.png"
+		/>
+		<meta
+			property="og:image:secure_url"
+			content="https://izzi.ink/izzi-ink-preview.png"
+		/>
+		<meta property="og:image:type" content="image/png" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="627" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -26,33 +36,6 @@ import { SEO } from "astro-seo";
 		<meta
 			name="description"
 			content="I am a Solutions Architect with a focus on Front-end Technology and Design. I help teams to design and build future-friendly products that customers love."
-		/>
-
-		<SEO
-			title="Izzi Ink Astronaut"
-			description="I am a Solutions Architect with a focus on Front-end Technology and Design. I help teams to design and build future-friendly products that customers love."
-			canonical="https://www.izzink.com"
-			image="https://www.izzink.com/images/izzi-ink-preview.png"
-			twitter={{
-				creator: "@jonasmerlins1",
-			}}
-			extend={{
-				// extending the default link tags
-				link: [{ rel: "icon", href: "/favicon.ico" }],
-				// extending the default meta tags
-				meta: [
-					{
-						name: "twitter:image",
-						content:
-							"https://github.com/izzi-ink/blue-amber/blob/main/src/images/izzi-ink-preview.png",
-					},
-					{
-						name: "twitter:title",
-						content: "Tinker Tailor Soldier Spy",
-					},
-					{ name: "twitter:description", content: "Agent" },
-				],
-			}}
 		/>
 	</head>
 	<body>
