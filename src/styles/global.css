@@ -8,7 +8,7 @@
   --passion: #f35f75;
   --gem: #562cc2;
   --indigo: #3d50b5;
-  -dusk: #5C6BC0;
+  --dusk: #5C6BC0;
   --sky: #47A8CA;
   --darkrain: #2D6072;
   --rain: #317B9A;
@@ -200,8 +200,6 @@ p {
   font-weight: 500;
   color: #ffffff;
 }
-
-
 
 .hero {
   background-image: url("../images/bg.svg");
