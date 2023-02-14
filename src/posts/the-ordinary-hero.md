@@ -17,3 +17,7 @@ This human, from an ordinary world, has all the pain and joy and complexities th
 Let's then, before we embark on simply writing a user story, plotting a user journey, be mindful of the ordinary world with its struggles and ordinarity the person at the end of your system, come from. Can we transform their lives by how we design?
 
 In our next blog post, we'll discover how Campbell's second step, calls us to adventure!
+
+### References
+
+[Adam Lefton: Medium Post](https://medium.com/s/user-friendly/why-im-done-saying-user-user-experience-and-ux-in-2019-4fdfc6b7de23)

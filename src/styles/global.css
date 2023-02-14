@@ -1,5 +1,13 @@
 /* Basic Aesthetic Styling */
 :root {
+  /* Rainbow */
+  --redheart: #F28C8F;
+  --orangehome: #F2B8A4;
+  --yellowsun: #F3D2B5;
+  --greenleaf: #558FA7;
+  --blueocean: #2D6072;
+  /* End of Rainbow */
+
   --badger: #282828;
   --crown: #c0c0c0;
   --ranger: #635d58;
@@ -44,7 +52,23 @@ li {
 
 a {
   text-decoration: none;
+
+
 }
+
+a :hover {
+  color: #F2E9C2;
+}
+
+p,
+a {
+  font-family: 'Inter', sans-serif;
+  color: #D7CCC8;
+
+
+}
+
+
 
 h1 {
   /* hero xl */

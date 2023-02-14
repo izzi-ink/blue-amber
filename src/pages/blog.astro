@@ -33,11 +33,16 @@ const posts = await Astro.glob("../posts/*.md");
     </section>
 </Layout>
 <style>
-    a {
+    p {
         padding-left: 2rem;
+        text-decoration: none;
         color: aliceblue;
     }
 
+    a {
+        text-decoration: none;
+        color: aliceblue;
+    }
     .features .card-container {
         border: rgb(119, 156, 49) 0px solid;
         display: grid;
