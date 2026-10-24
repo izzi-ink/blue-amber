@@ -5,6 +5,7 @@ export const SITE = {
   instagram: 'https://www.instagram.com/izzidoodles/',
   github: 'https://github.com/izzi-ink',
   ilzeKoning: 'https://ilzekoning.com/',
+  sugarStarCandy: 'https://sugarstarcandy.space/',
 };
 
 export const NAV = [
