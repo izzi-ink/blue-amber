@@ -9,3 +9,5 @@ pencilAlt: The first pencil sketch of the same face on the dotted paper of a Mol
 medium: Pencil in a Moleskine, then blue Bic
 tags: [portrait, character]
 ---
+
+The Pattern Master’s apprentice standing in stillness and perfection — it does not mean actions are perfect.
