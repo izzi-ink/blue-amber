@@ -25,13 +25,16 @@ const sketchbook = defineCollection({
 });
 
 // Writing: essays, poems, half-formed thoughts.
+// `origin` marks notes first published elsewhere, like the old Sugar Star Candy astronomy blog.
 const notes = defineCollection({
   loader: folders('./src/content/notes'),
   schema: z.object({
     title: z.string(),
+    subtitle: z.string().optional(),
     date: z.coerce.date(),
     description: z.string(),
     tags: z.array(z.string()).default([]),
+    origin: z.enum(['sugar-star-candy']).optional(),
     draft: z.boolean().default(false),
   }),
 });

@@ -1,7 +1,7 @@
 ---
 import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
-import { formatDate } from '../../lib/site';
+import { formatDate, SITE } from '../../lib/site';
 import { getNotes } from '../../lib/entries';
 
 export async function getStaticPaths() {
@@ -23,6 +23,7 @@ const isPoem = note.data.tags.includes('poem');
         {minutes && !isPoem && <span> · {minutes} min read</span>}
       </p>
       <h1>{note.data.title}</h1>
+      {note.data.subtitle && <p class="lede">{note.data.subtitle}</p>}
       {
         note.data.tags.length > 0 && (
           <ul class="tags">
@@ -36,6 +37,13 @@ const isPoem = note.data.tags.includes('poem');
     <div class:list={['prose', { poem: isPoem }]}>
       <Content />
     </div>
+    {
+      note.data.origin === 'sugar-star-candy' && (
+        <p class="hand note__origin">
+          first published on <a href={SITE.sugarStarCandy}>Sugar Star Candy</a>, my stargazing blog
+        </p>
+      )
+    }
     <footer class="note__footer">
       <a href="/notes">← All notes</a>
     </footer>
@@ -55,11 +63,21 @@ const isPoem = note.data.tags.includes('poem');
     border-bottom: 1px solid var(--rule);
   }
 
-  /* Poems sit in the middle of the page, set a little larger */
+  /* Poems are set a little larger; one line per paragraph reads as one line, not a gap */
   .poem {
     font-size: var(--text-lg);
     font-style: italic;
     line-height: 1.8;
+  }
+
+  .poem > :global(p + p) {
+    margin-top: var(--space-1);
+  }
+
+  .note__origin {
+    margin-top: var(--space-6);
+    font-size: var(--text-lg);
+    rotate: -1.5deg;
   }
 
   .note__footer {

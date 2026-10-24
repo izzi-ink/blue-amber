@@ -383,6 +383,15 @@ a:hover {
   padding: var(--space-3);
 }
 
+/* A caption under an image in Markdown: <p class="caption"> right after it */
+.prose .caption {
+  margin-top: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--ink-faint);
+  text-align: center;
+}
+
 .prose code {
   font-family: var(--font-mono);
   font-size: 0.85em;
