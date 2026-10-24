@@ -3,6 +3,7 @@ title: "You're my hero!"
 date: 2019-08-01
 description: "How do we design solutions that turn ordinary people into heroes on their own journeys?"
 tags: [writing, design]
+draft: true
 ---
 
 ### We have power

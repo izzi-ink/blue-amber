@@ -38,8 +38,15 @@ const isPoem = note.data.tags.includes('poem');
       <Content />
     </div>
     {
+      isPoem && (
+        <p class="hand note__aside">
+          more poems in my Kindle book, <a href={SITE.book.url}>{SITE.book.title}</a>
+        </p>
+      )
+    }
+    {
       note.data.origin === 'sugar-star-candy' && (
-        <p class="hand note__origin">
+        <p class="hand note__aside">
           first published on <a href={SITE.sugarStarCandy}>Sugar Star Candy</a>, my stargazing blog
         </p>
       )
@@ -74,10 +81,15 @@ const isPoem = note.data.tags.includes('poem');
     margin-top: var(--space-1);
   }
 
-  .note__origin {
+  /* Handwritten notes after the text: the book, where it was first published */
+  .note__aside {
     margin-top: var(--space-6);
     font-size: var(--text-lg);
     rotate: -1.5deg;
+  }
+
+  .note__aside + .note__aside {
+    margin-top: var(--space-3);
   }
 
   .note__footer {

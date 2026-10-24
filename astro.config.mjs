@@ -12,8 +12,6 @@ export default defineConfig({
   // Keep links to the old blog URLs working.
   redirects: {
     '/blog': '/notes',
-    '/my-hero': '/notes/my-hero',
-    '/the-ordinary-hero': '/notes/the-ordinary-hero',
     '/looking-up-at-antares': '/notes/looking-up-at-antares',
   },
 });
