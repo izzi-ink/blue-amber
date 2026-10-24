@@ -6,6 +6,7 @@ export const SITE = {
   github: 'https://github.com/izzi-ink',
   ilzeKoning: 'https://ilzekoning.com/',
   sugarStarCandy: 'https://sugarstarcandy.space/',
+  book: { title: 'The Soulcage has a Mirror', url: 'https://www.amazon.com/dp/B0DFDSVWSD' },
 };
 
 export const NAV = [

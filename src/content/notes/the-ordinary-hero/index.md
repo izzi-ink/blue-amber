@@ -3,6 +3,7 @@ title: "The ordinary world of the hero"
 date: 2022-06-20
 description: "Looking past the hero's journey, at the ordinary world of the person using our systems."
 tags: [writing, design]
+draft: true
 ---
 
 Adam Lefton writes in a [Medium Post](https://medium.com/s/user-friendly/why-im-done-saying-user-user-experience-and-ux-in-2019-4fdfc6b7de23) about the outdated and unethical use of the term user, to refer to people at the mercy of the systems we design. I am hesitant to introduce yet another new buzz word to the team I work with, we've been making steady progress to introduce User Experience as part of the vocabulary we use.
