@@ -5,5 +5,6 @@ description: "Orchid and Lily"
 image: ./image.jpg
 alt: "Digital drawing of a face with green eyes, washed in pinks and yellows like flower petals."
 medium: "Digital"
+category: paintbox
 tags: []
 ---

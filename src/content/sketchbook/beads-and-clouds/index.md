@@ -6,7 +6,7 @@ image: ./ink.webp
 alt: Blue ballpoint portrait of an elf in profile with short curly hair and a long string of beads, framed against a cloudy sky.
 pencil: ./pencil.webp
 pencilAlt: The first pencil sketch of the same elf on the dotted page of a Moleskine.
-medium: Pencil in a Moleskine, then blue ballpoint
+medium: Pencil in a Moleskine, then blue Bic
 tags: [portrait, character]
 ---
 

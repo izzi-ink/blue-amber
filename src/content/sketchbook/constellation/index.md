@@ -5,5 +5,6 @@ description: "A constellation in the night sky."
 image: ./image.jpg
 alt: "White ink stars and a dotted constellation drawn over a deep blue night sky, with a misty band of stars."
 medium: "White ink"
+category: paintbox
 tags: [sci-fi, night-sky, constellation]
 ---

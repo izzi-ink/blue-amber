@@ -6,11 +6,15 @@ export const SITE = {
   github: 'https://github.com/izzi-ink',
   ilzeKoning: 'https://ilzekoning.com/',
   sugarStarCandy: 'https://sugarstarcandy.space/',
-  book: { title: 'The Soulcage has a Mirror', url: 'https://www.amazon.com/dp/B0DFDSVWSD' },
+  book: {
+    title: 'The Soulcage has a Mirror: Reflections on Consciousness',
+    url: 'https://www.amazon.com/dp/B0DFDSVWSD',
+  },
 };
 
 export const NAV = [
   { href: '/sketchbook', label: 'Sketchbook' },
+  { href: '/paintbox', label: 'Paintbox' },
   { href: '/notes', label: 'Notes' },
   { href: '/about', label: 'About' },
 ];

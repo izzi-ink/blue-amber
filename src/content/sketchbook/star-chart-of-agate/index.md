@@ -5,5 +5,6 @@ description: "Starchart of agate"
 image: ./image.jpg
 alt: "Circular chart with a hexagonal centre, the outer ring divided into segments painted like slices of agate in amber, blue and orange."
 medium: "Ink and watercolour"
+category: paintbox
 tags: []
 ---

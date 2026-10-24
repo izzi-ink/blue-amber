@@ -5,5 +5,6 @@ description: "Freddie, a Southern Masked Weaver."
 image: ./image.jpg
 alt: "Freddie the weaver: a bright yellow bird with a black head, perched on a thin branch against dark green foliage."
 medium: "Mixed media: photo and digital painting"
+category: paintbox
 tags: [bird]
 ---

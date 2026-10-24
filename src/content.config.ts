@@ -7,6 +7,8 @@ const folders = (base: string) =>
   glob({ pattern: '*/index.md', base, generateId: ({ entry }) => entry.split('/')[0] });
 
 // Drawings. `image` is the finished piece; `pencil` is the optional Moleskine original.
+// `category` puts it in the Sketchbook (pencil, Bic, single-colour ink) or the Paintbox
+// (colour: paint, washes, markers, digital and mixed media).
 const sketchbook = defineCollection({
   loader: folders('./src/content/sketchbook'),
   schema: ({ image }) =>
@@ -19,6 +21,7 @@ const sketchbook = defineCollection({
       pencil: image().optional(),
       pencilAlt: z.string().optional(),
       medium: z.string().optional(),
+      category: z.enum(['sketchbook', 'paintbox']).default('sketchbook'),
       tags: z.array(z.string()).default([]),
       draft: z.boolean().default(false),
     }),

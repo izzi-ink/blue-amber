@@ -7,5 +7,6 @@ alt: "Digital painting of a young man with tousled blond hair and pale blue eyes
 pencil: ./pencil.jpg
 pencilAlt: "The pencil version of the same face, in soft grey."
 medium: "Pencil, then digital colour"
+category: paintbox
 tags: []
 ---
