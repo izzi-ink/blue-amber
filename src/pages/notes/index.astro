@@ -1,0 +1,30 @@
+---
+import Base from '../../layouts/Base.astro';
+import NoteList from '../../components/NoteList.astro';
+import { getNotes } from '../../lib/entries';
+
+const notes = await getNotes();
+---
+
+<Base title="Notes" description="Essays, poems and half-formed thoughts about design, stories and people.">
+  <section class="wrap page">
+    <header class="page__header">
+      <p class="label">Notes</p>
+      <h1>Thoughts, scribbled down</h1>
+      <p class="lede">Essays, poems and half-formed ideas about design, stories and the people we make things for.</p>
+    </header>
+    <NoteList notes={notes} />
+  </section>
+</Base>
+
+<style>
+  .page {
+    padding-top: var(--space-6);
+  }
+
+  .page__header {
+    display: grid;
+    gap: var(--space-2);
+    margin-bottom: var(--space-5);
+  }
+</style>

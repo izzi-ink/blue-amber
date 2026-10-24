@@ -1,99 +1,44 @@
 ---
-import linkedIn from "../images/linkedin-logo.svg";
-import github from "../images/logo-github-circle.svg";
-import izziInkLogo from "../images/footer-logo.svg";
-import fem from "../images/fem.svg";
-import figma from "../images/figma-logo.svg";
+import { SITE } from '../lib/site';
+
+const year = new Date().getFullYear();
 ---
 
-<footer class="footer-containter">
-    <div class="container-footer">
-        <div>
-            <h3>Izzi Ink</h3>
-            <p>Houtvollop Group &#169 2023</p>
-        </div>
-        <div>
-            <h3>Links</h3>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/blog">Blog</a></li>
-                <li>
-                    <a href="https://github.com/izzi-ink" target="_blank"
-                        ><img
-                            src={github}
-                            width="48"
-                            height="48"
-                            alt="Izzi Ink on GitHub"
-                        /></a
-                    >
-                </li>
-                <li>
-                    <a
-                        href="https://frontendmasters.com/u/Izzi/"
-                        target="_blank"
-                        ><img
-                            src={fem}
-                            width="48"
-                            height="48"
-                            alt="Izzi Ink on Frontend Masters"
-                        /></a
-                    >
-                </li>
-                <li>
-                    <a href="https://www.figma.com/@izziink" target="_blank"
-                        ><img
-                            src={figma}
-                            width="20"
-                            height="30"
-                            alt="Izzi Ink on Figma"
-                        /></a
-                    >
-                </li>
-            </ul>
-        </div>
-    </div>
+<footer class="footer">
+  <div class="wrap wrap--wide footer__inner">
+    <ul class="footer__links">
+      <li><a href={SITE.ilzeKoning}>Ilze Koning (the day job)</a></li>
+      <li><a href={SITE.github}>GitHub</a></li>
+      <li><a href="/rss.xml">RSS</a></li>
+    </ul>
+    <p class="meta">© {year} Izzi Ink. Drawings and words are mine; please ask before reusing.</p>
+  </div>
 </footer>
 
 <style>
-    .container-footer {
-        background: var(--color-primary);
-        color: #fff;
-        text-align: center;
-        padding: 20px;
-        margin-top: 2rem;
-    }
+  .footer {
+    margin-top: var(--space-7);
+    border-top: 1px solid var(--rule);
+    background: var(--paper);
+  }
 
-    .container-footer .footer-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+  .footer__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+    padding-block: var(--space-5);
+  }
 
-    .container-footer a {
-        color: var(--desert-sand);
-    }
-
-    p {
-        margin: 0;
-        justify-content: center;
-    }
-
-    .footer a:hover {
-        text-decoration: underline;
-    }
-
-    .footer h3 {
-        margin-bottom: 10px;
-    }
-
-    .footer div:nth-child(1) {
-        text-align: left;
-    }
-
-    @media (max-width: 500px) {
-        .footer div:nth-child(2) {
-            display: none;
-        }
-    }
+  .footer__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2) var(--space-4);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+  }
 </style>

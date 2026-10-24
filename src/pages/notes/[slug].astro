@@ -1,0 +1,72 @@
+---
+import { render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { formatDate } from '../../lib/site';
+import { getNotes } from '../../lib/entries';
+
+export async function getStaticPaths() {
+  const notes = await getNotes();
+  return notes.map((note) => ({ params: { slug: note.id }, props: { note } }));
+}
+
+const { note } = Astro.props;
+const { Content, remarkPluginFrontmatter } = await render(note);
+const minutes = remarkPluginFrontmatter?.minutes;
+const isPoem = note.data.tags.includes('poem');
+---
+
+<Base title={note.data.title} description={note.data.description} type="article">
+  <article class="wrap note">
+    <header class="note__header">
+      <p class="meta">
+        <time datetime={note.data.date.toISOString()}>{formatDate(note.data.date)}</time>
+        {minutes && !isPoem && <span> · {minutes} min read</span>}
+      </p>
+      <h1>{note.data.title}</h1>
+      {
+        note.data.tags.length > 0 && (
+          <ul class="tags">
+            {note.data.tags.map((tag) => (
+              <li class="tag">{tag}</li>
+            ))}
+          </ul>
+        )
+      }
+    </header>
+    <div class:list={['prose', { poem: isPoem }]}>
+      <Content />
+    </div>
+    <footer class="note__footer">
+      <a href="/notes">← All notes</a>
+    </footer>
+  </article>
+</Base>
+
+<style>
+  .note {
+    padding-top: var(--space-6);
+  }
+
+  .note__header {
+    display: grid;
+    gap: var(--space-3);
+    padding-bottom: var(--space-5);
+    margin-bottom: var(--space-5);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  /* Poems sit in the middle of the page, set a little larger */
+  .poem {
+    font-size: var(--text-lg);
+    font-style: italic;
+    line-height: 1.8;
+  }
+
+  .note__footer {
+    margin-top: var(--space-6);
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--rule);
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+  }
+</style>

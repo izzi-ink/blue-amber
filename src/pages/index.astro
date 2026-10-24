@@ -1,43 +1,100 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Hero from "../components/Hero.astro";
-import Features from "../components/Features.astro";
-import Footer from "../components/Footer.astro";
+import Base from '../layouts/Base.astro';
+import SketchGrid from '../components/SketchGrid.astro';
+import NoteList from '../components/NoteList.astro';
+import { SITE } from '../lib/site';
+import { getNotes, getSketches } from '../lib/entries';
+
+const sketches = (await getSketches()).slice(0, 6);
+const notes = (await getNotes()).slice(0, 3);
 ---
 
-<Layout>
-	<Hero />
-	<Features />
-	<!-- <Tabs
-		headings={["ANALYSIS", "DESIGN", "ARCHITECTURE", "CODE"]}
-		contents={[
-			"I help you make sense of your business problem",
-			"I design with my team solutions that compliment our analysis efforts",
-			"We reccomend and ensure a future-proof and robust Architecture, aligned to the business",
-			"We provide the Code and implement the solution",
-		]}
-	/> -->
+<Base>
+  <section class="wrap wrap--wide hero">
+    <p class="label">{SITE.tagline}</p>
+    <h1>{SITE.name}</h1>
+    <p class="lede">
+      My sketchbook, out in the open. Drawings that start as pencil doodles in a Moleskine and get finished in ink,
+      bits of writing, and design experiments that may or may not go anywhere.
+    </p>
+    <div class="buttons">
+      <a class="button" href="/sketchbook">Open the sketchbook</a>
+      <a class="button button--ghost" href="/notes">Read the notes</a>
+    </div>
+    <p class="hand hero__note" aria-hidden="true">mostly blue biro, occasionally a pencil, never finished</p>
+  </section>
 
-	<!-- <section class="page-content">
-		<div class="page-container">
-			<h2>Get Started With Astro</h2>
-			<p>
-				Get a new Astro project up and running locally with our helpful
-				create-astro CLI wizard!
-			</p>
+  <section class="wrap wrap--wide section" aria-labelledby="latest">
+    <div class="section__head">
+      <p class="label">Sketchbook</p>
+      <h2 id="latest">Latest doodles</h2>
+    </div>
+    <SketchGrid sketches={sketches} />
+    <p class="more"><a href="/sketchbook">Every page →</a></p>
+  </section>
 
-			<h3>Start Building</h3>
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-				ipsum deserunt inventore ut voluptate, officia maiores repellat
-				tenetur praesentium omnis est ex tempora a necessitatibus
-				reiciendis at et dignissimos. Ipsam eius consequuntur cupiditate
-				aperiam porro, esse laborum impedit nesciunt ut voluptatum
-				assumenda aspernatur libero iusto error molestias dolorum,
-				necessitatibus labore?
-			</p>
-		</div>
-	</section> -->
+  <section class="wrap wrap--wide section" aria-labelledby="notes">
+    <div class="section__head">
+      <p class="label">Notes</p>
+      <h2 id="notes">Thoughts, scribbled down</h2>
+    </div>
+    <NoteList notes={notes} />
+    <p class="more"><a href="/notes">All notes →</a></p>
+  </section>
+</Base>
 
-	<Footer />
-</Layout>
+<style>
+  .hero {
+    position: relative;
+    display: grid;
+    gap: var(--space-4);
+    padding-top: var(--space-7);
+    padding-bottom: var(--space-5);
+  }
+
+  .hero h1 {
+    font-size: var(--text-3xl);
+    line-height: 1;
+    rotate: -1.5deg;
+    justify-self: start;
+  }
+
+  .hero .lede {
+    max-width: 36rem;
+  }
+
+  .hero__note {
+    font-size: var(--text-lg);
+    rotate: -3deg;
+    justify-self: start;
+    margin-top: var(--space-2);
+  }
+
+  @media (min-width: 900px) {
+    .hero__note {
+      position: absolute;
+      right: var(--space-3);
+      top: calc(var(--space-7) + 3rem);
+      max-width: 16rem;
+      text-align: right;
+      rotate: 4deg;
+      margin-top: 0;
+    }
+  }
+
+  .section {
+    padding-top: var(--space-6);
+  }
+
+  .section__head {
+    display: grid;
+    gap: var(--space-2);
+    margin-bottom: var(--space-5);
+  }
+
+  .more {
+    margin-top: var(--space-5);
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+  }
+</style>
