@@ -1,6 +1,7 @@
 ---
 import { NAV, SITE } from '../lib/site';
 import ThemeToggle from './ThemeToggle.astro';
+import logo from '../images/logo.svg';
 
 const path = Astro.url.pathname.replace(/\/$/, '') || '/';
 const isCurrent = (href: string) => path === href || path.startsWith(`${href}/`);
@@ -8,7 +9,10 @@ const isCurrent = (href: string) => path === href || path.startsWith(`${href}/`)
 
 <header class="cover">
   <div class="wrap wrap--wide cover__inner">
-    <a class="cover__name" href="/">{SITE.name}</a>
+    <a class="cover__name" href="/">
+      <img src={logo.src} width={logo.width} height={logo.height} alt="" />
+      <span>{SITE.name}</span>
+    </a>
     <div class="cover__actions">
       <nav aria-label="Main">
         <ul>
@@ -53,10 +57,22 @@ const isCurrent = (href: string) => path === href || path.startsWith(`${href}/`)
 
   /* The name, written on the cover in white pen */
   .cover__name {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-3);
+    text-decoration: none;
+  }
+
+  /* The honey badger: the original Izzi Ink logo */
+  .cover__name img {
+    width: 2.25rem;
+    height: auto;
+  }
+
+  .cover__name span {
     font-family: var(--font-hand);
     font-size: var(--text-xl);
     line-height: 1;
-    text-decoration: none;
     rotate: -2deg;
   }
 

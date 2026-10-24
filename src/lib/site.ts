@@ -2,6 +2,7 @@ export const SITE = {
   name: 'Izzi Ink',
   tagline: 'Thoughts, doodles and experiments',
   description: 'The sketchbook of Izzi Koning: drawings, writing and design experiments, straight from the Moleskine.',
+  instagram: 'https://www.instagram.com/izzidoodles/',
   github: 'https://github.com/izzi-ink',
   ilzeKoning: 'https://ilzekoning.com/',
 };

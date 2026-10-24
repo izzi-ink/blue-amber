@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import SketchGrid from '../../components/SketchGrid.astro';
 import { getSketches } from '../../lib/entries';
+import { SITE } from '../../lib/site';
 
 const sketches = await getSketches();
 ---
@@ -12,6 +13,7 @@ const sketches = await getSketches();
       <p class="label">Sketchbook</p>
       <h1>Doodles &amp; drawings</h1>
       <p class="lede">Everything starts as a pencil sketch in a Moleskine. Some of it gets inked. Newest first.</p>
+      <p class="hand note">more doodles on <a href={SITE.instagram}>Instagram @izzidoodles</a></p>
     </header>
     <SketchGrid sketches={sketches} />
   </section>
@@ -20,6 +22,12 @@ const sketches = await getSketches();
 <style>
   .page {
     padding-top: var(--space-6);
+  }
+
+  .note {
+    font-size: var(--text-lg);
+    rotate: -1.5deg;
+    justify-self: start;
   }
 
   .page__header {
