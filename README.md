@@ -38,7 +38,11 @@ Images can be any size or format; Astro resizes and compresses them at build tim
 ## Adding a note
 
 Same idea in `src/content/notes/<slug>/index.md`, with `title`, `date`, `description` and `tags`. Tag a note `poem`
-to set it as a poem. Set `draft: true` on any entry to hide it.
+to set it as a poem.
+
+Set `draft: true` on any entry to hide it from the built site. Drafts still show (with a "draft" label) when you
+run `npm run dev`, so you can see them in place before publishing. The drawings imported from Instagram start out
+as drafts.
 
 ## Commands
 

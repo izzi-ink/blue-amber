@@ -3,7 +3,7 @@ import { getImage, Image } from 'astro:assets';
 import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import { formatDate } from '../../lib/site';
-import { getSketches } from '../../lib/entries';
+import { finishLabel, getSketches } from '../../lib/entries';
 
 export async function getStaticPaths() {
   const sketches = await getSketches();
@@ -40,7 +40,7 @@ const ogImage = await getImage({ src: data.image, width: 1200, format: 'jpeg' })
           <span class="hand stages__arrow" aria-hidden="true">→</span>
           <figure class="card taped tilt" style="--tilt: 1deg">
             <Image src={data.image} alt={data.alt} widths={[480, 800, 1200]} sizes="(min-width: 50rem) 28rem, 90vw" />
-            <figcaption class="hand">then, in ink</figcaption>
+            <figcaption class="hand">then, in {finishLabel(data.medium)}</figcaption>
           </figure>
         </div>
       ) : (
