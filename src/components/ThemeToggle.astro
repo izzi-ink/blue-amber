@@ -1,0 +1,90 @@
+---
+// Light/dark switch. With no saved choice the site follows the device setting;
+// picking the same theme as the device clears the saved choice again.
+---
+
+<button class="theme-toggle" type="button" hidden>
+  <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+    <path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"></path>
+  </svg>
+  <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+    <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"></circle>
+    <path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path>
+  </svg>
+</button>
+
+<script>
+  const KEY = 'theme';
+  const media = window.matchMedia('(prefers-color-scheme: dark)');
+  const root = document.documentElement;
+
+  const current = () => root.dataset.theme ?? (media.matches ? 'dark' : 'light');
+
+  function render(button: HTMLButtonElement) {
+    const next = current() === 'dark' ? 'light' : 'dark';
+    button.dataset.showing = current();
+    button.setAttribute('aria-label', `Switch to ${next} theme`);
+    button.title = `Switch to ${next} theme`;
+  }
+
+  for (const button of document.querySelectorAll<HTMLButtonElement>('.theme-toggle')) {
+    button.hidden = false;
+    render(button);
+
+    button.addEventListener('click', () => {
+      const next = current() === 'dark' ? 'light' : 'dark';
+      const matchesDevice = next === (media.matches ? 'dark' : 'light');
+      try {
+        if (matchesDevice) localStorage.removeItem(KEY);
+        else localStorage.setItem(KEY, next);
+      } catch {
+        // Storage can be blocked; the switch still works for this page view.
+      }
+      if (matchesDevice) delete root.dataset.theme;
+      else root.dataset.theme = next;
+      render(button);
+    });
+
+    media.addEventListener('change', () => render(button));
+  }
+</script>
+
+<style>
+  .theme-toggle {
+    display: inline-grid;
+    place-items: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: 0;
+    border: 1.5px solid rgb(244 238 223 / 0.35);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--cover-ink);
+    cursor: pointer;
+    transition: border-color 0.12s ease, background 0.12s ease;
+  }
+
+  .theme-toggle[hidden] {
+    display: none;
+  }
+
+  .theme-toggle:hover {
+    border-color: var(--cover-ink);
+    background: rgb(244 238 223 / 0.08);
+  }
+
+  .theme-toggle:focus-visible {
+    outline: 2px solid var(--cover-ink);
+    outline-offset: 2px;
+  }
+
+  /* Show the theme you'd switch to: a moon in light mode, a sun in dark mode */
+  .icon-sun,
+  .theme-toggle[data-showing='dark'] .icon-moon {
+    display: none;
+  }
+
+  .theme-toggle[data-showing='dark'] .icon-sun {
+    display: block;
+  }
+</style>

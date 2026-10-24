@@ -1,0 +1,111 @@
+/*
+ * Design tokens — "notebook" design system, sketchbook edition.
+ *
+ * The same materials as ilzekoning.com (cream paper, black ink, white index
+ * cards, the black cover and elastic band), plus a blue ballpoint pen and
+ * masking tape for a looser, hand-made feel. Every colour, font, size and
+ * space on the site comes from here, so the look can be changed in one place.
+ */
+
+:root {
+  /* Materials */
+  --paper: #f4eedf;          /* cream page */
+  --paper-deep: #e8dfca;     /* page edge, hover, subtle fills */
+  --card: #ffffff;           /* index cards, code, inputs */
+  --cover: #161514;          /* the black notebook cover (header) */
+  --cover-ink: #f4eedf;      /* text on the cover */
+  --band-color: #161514;     /* the elastic band */
+
+  /* Ink */
+  --ink: #1b1a18;            /* body text, headings */
+  --ink-soft: #46423b;       /* secondary text */
+  --ink-faint: #6b655a;      /* meta text (dates, labels); 5:1 on paper */
+  --rule: rgb(27 26 24 / 0.14);  /* ruled lines and borders */
+  --dot: rgb(27 26 24 / 0.11);   /* dot grid on the page */
+  --pencil: #4f5054;           /* graphite */
+  --ballpoint: #2c3a9c;        /* blue biro: links, notes, accents; 9:1 on paper */
+  --tape: rgb(226 208 160 / 0.75); /* masking tape */
+
+  /* Type */
+  --font-serif: "Source Serif 4 Variable", "Iowan Old Style", Georgia, serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --font-hand: "Flux Architect", "Architects Daughter", "Bradley Hand", cursive;
+
+  --text-xs: 0.8125rem;   /* 13px labels */
+  --text-sm: 0.9375rem;   /* 15px meta */
+  --text-md: 1.125rem;    /* 18px body */
+  --text-lg: 1.375rem;    /* 22px lede, h3 */
+  --text-xl: 2rem;        /* 32px h2 */
+  --text-2xl: 2.75rem;    /* 44px h1 (handwritten runs small) */
+  --text-3xl: clamp(2.75rem, 7vw, 4.25rem); /* home title */
+
+  --leading: 1.7;
+  --measure: 68ch;
+
+  /* Space (8px grid, matching the dot grid) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+  --space-7: 4.5rem;
+
+  /* Shape */
+  --radius: 6px;             /* rounded notebook corners */
+  --shadow: 0 1px 0 var(--rule), 0 6px 18px -10px rgb(27 26 24 / 0.35);
+  --grid: 24px;              /* dot-grid pitch */
+  --band: 12px;              /* elastic band width */
+
+  color-scheme: light;
+}
+
+/*
+ * Night notebook: the same system with the materials inverted.
+ * Used when the visitor picks dark with the header switch, or when their
+ * device is set to dark and they haven't picked light. The two blocks must
+ * stay identical.
+ */
+:root[data-theme="dark"] {
+  --paper: #171614;
+  --paper-deep: #24221f;
+  --card: #201f1c;
+  --cover: #0c0b0a;
+  --cover-ink: #f4eedf;
+  --band-color: #3a3733;
+
+  --ink: #efe8d8;
+  --ink-soft: #cdc5b3;
+  --ink-faint: #a39b8a;
+  --rule: rgb(244 238 223 / 0.16);
+  --dot: rgb(244 238 223 / 0.09);
+  --pencil: #d8d3c7;           /* white pencil on black paper */
+  --ballpoint: #a9b4ff;        /* gel pen on black paper */
+  --tape: rgb(160 148 116 / 0.45);
+  --shadow: 0 1px 0 var(--rule), 0 6px 18px -10px rgb(0 0 0 / 0.8);
+
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #171614;
+    --paper-deep: #24221f;
+    --card: #201f1c;
+    --cover: #0c0b0a;
+    --cover-ink: #f4eedf;
+    --band-color: #3a3733;
+
+    --ink: #efe8d8;
+    --ink-soft: #cdc5b3;
+    --ink-faint: #a39b8a;
+    --rule: rgb(244 238 223 / 0.16);
+    --dot: rgb(244 238 223 / 0.09);
+    --pencil: #d8d3c7;
+    --ballpoint: #a9b4ff;
+    --tape: rgb(160 148 116 / 0.45);
+    --shadow: 0 1px 0 var(--rule), 0 6px 18px -10px rgb(0 0 0 / 0.8);
+
+    color-scheme: dark;
+  }
+}

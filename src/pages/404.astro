@@ -1,0 +1,30 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Page not found" noindex>
+  <section class="wrap lost">
+    <p class="label">404</p>
+    <h1>This page got torn out.</h1>
+    <p class="lede">Whatever was here has gone missing from the sketchbook.</p>
+    <p class="hand" aria-hidden="true">(it was probably a bad drawing anyway)</p>
+    <div class="buttons">
+      <a class="button" href="/">Back to the start</a>
+      <a class="button button--ghost" href="/sketchbook">Sketchbook</a>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .lost {
+    display: grid;
+    gap: var(--space-4);
+    padding-top: var(--space-7);
+  }
+
+  .hand {
+    font-size: var(--text-lg);
+    rotate: -2deg;
+    justify-self: start;
+  }
+</style>

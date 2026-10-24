@@ -1,52 +1,104 @@
 ---
-import logo from "../images/logo.svg";
+import { NAV, SITE } from '../lib/site';
+import ThemeToggle from './ThemeToggle.astro';
+import logo from '../images/logo.svg';
+
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+const isCurrent = (href: string) => path === href || path.startsWith(`${href}/`);
 ---
 
-<header class="header">
-    <div class="container">
-        <div class="logo">
-            <a href="/">
-                <img src={logo} alt="" />
-            </a>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/blog">Blog</a></li>
-            </ul>
-        </nav>
+<header class="cover">
+  <div class="wrap wrap--wide cover__inner">
+    <a class="cover__name" href="/">
+      <img src={logo.src} width={logo.width} height={logo.height} alt="" />
+      <span>{SITE.name}</span>
+    </a>
+    <div class="cover__actions">
+      <nav aria-label="Main">
+        <ul>
+          {
+            NAV.map(({ href, label }) => (
+              <li>
+                <a href={href} aria-current={isCurrent(href) ? 'page' : undefined}>
+                  {label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+      <ThemeToggle />
     </div>
+  </div>
 </header>
 
 <style>
-    .header {
-        height: 70px;
-        background: var(--color-primary);
-    }
+  /* The black notebook cover */
+  .cover {
+    background: var(--cover);
+    color: var(--cover-ink);
+    border-bottom: 3px solid var(--paper-deep);
+  }
 
-    .header .container {
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 20px;
-    }
+  .cover__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-2) var(--space-5);
+    padding-block: var(--space-4);
+  }
 
-    .header img {
-        height: 35px;
-        vertical-align: middle;
-    }
+  .cover__actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+  }
 
-    .header nav ul {
-        display: flex;
-    }
+  /* The name, written on the cover in white pen */
+  .cover__name {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-3);
+    text-decoration: none;
+  }
 
-    .header nav ul li {
-        padding: 0 10px;
-    }
+  /* The honey badger: the original Izzi Ink logo */
+  .cover__name img {
+    width: 2.25rem;
+    height: auto;
+  }
 
-    .header nav ul li a {
-        color: #fff;
-    }
+  .cover__name span {
+    font-family: var(--font-hand);
+    font-size: var(--text-xl);
+    line-height: 1;
+    rotate: -2deg;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2) var(--space-4);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav a {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    text-decoration: none;
+    padding-block: var(--space-1);
+    border-bottom: 1.5px solid transparent;
+  }
+
+  nav a:hover,
+  nav a[aria-current='page'] {
+    border-bottom-color: currentColor;
+  }
+
+  a:focus-visible {
+    outline-color: var(--cover-ink);
+  }
 </style>

@@ -1,42 +1,57 @@
-# Welcome to [Izzi Ink](https://izzi.ink)
+# Izzi Ink
 
-## 🚀 Project Structure
+The sketchbook at [izzi.ink](https://izzi.ink): drawings, notes and design experiments.
 
-Inside of your Astro project, you'll see the following folders and files:
+It uses the same "notebook" design system as [ilzekoning.com](https://ilzekoning.com) (cream dotted paper, black
+cover, elastic band, index cards), loosened up with a blue ballpoint accent, handwritten headings and taped,
+slightly crooked cards. All design tokens live in `src/styles/tokens.css`.
+
+## Adding a drawing
+
+Make a folder in `src/content/sketchbook/` and put the images next to an `index.md`:
 
 ```
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+src/content/sketchbook/my-drawing/
+├── index.md
+├── ink.webp       # the finished piece
+└── pencil.jpg     # optional: the Moleskine photo
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+```md
+---
+title: My drawing
+date: 2026-10-24
+description: One line about it.
+image: ./ink.webp
+alt: What the drawing shows, for people who can't see it.
+pencil: ./pencil.jpg          # optional; adds the "pencil → ink" comparison
+pencilAlt: The pencil sketch.  # optional
+medium: Pencil, then blue ballpoint
+tags: [portrait]
+---
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+A few words about it, if you like.
+```
 
-Any static assets, like images, can be placed in the `public/` directory.
+Images can be any size or format; Astro resizes and compresses them at build time.
 
-## 🧞 Commands
+## Adding a note
 
-All commands are run from the root of the project, from a terminal:
+Same idea in `src/content/notes/<slug>/index.md`, with `title`, `date`, `description` and `tags`. Tag a note `poem`
+to set it as a poem.
 
-| Command                | Action                                             |
-| :--------------------- | :------------------------------------------------- |
-| `npm install`          | Installs dependencies                              |
-| `npm run dev`          | Starts local dev server at `localhost:3000`        |
-| `npm run build`        | Build your production site to `./dist/`            |
-| `npm run preview`      | Preview your build locally, before deploying       |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro preview` |
-| `npm run astro --help` | Get help using the Astro CLI                       |
+Set `draft: true` on any entry to hide it from the built site. Drafts still show (with a "draft" label) when you
+run `npm run dev`, so you can see them in place before publishing.
 
-## 👀 Want to learn more?
+## Commands
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+| Command           | Action                                   |
+| :---------------- | :--------------------------------------- |
+| `npm install`     | Install dependencies (Node 22.12+)       |
+| `npm run dev`     | Start the dev server at `localhost:4321` |
+| `npm run build`   | Build the site to `./dist/`              |
+| `npm run preview` | Preview the build                        |
+
+## Credits
+
+Flux Architect font by Clayton Cowan (freeware; see `public/fonts/flux-architect-LICENSE.txt`).
