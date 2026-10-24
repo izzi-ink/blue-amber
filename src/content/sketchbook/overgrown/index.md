@@ -6,5 +6,4 @@ image: ./image.jpg
 alt: "Dense ink doodle filling the page with leaves, scales, bubbles, spiky seed pods and textured clusters."
 medium: "Ink"
 tags: []
-draft: true
 ---

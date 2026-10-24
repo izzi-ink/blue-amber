@@ -6,5 +6,4 @@ image: ./image.jpg
 alt: "Ink profile of a young man with curly hair and glasses, with stars scattered over his shirt."
 medium: "Ink"
 tags: [outsiders, gender-lines, city-alchemist]
-draft: true
 ---

@@ -6,5 +6,4 @@ image: ./image.jpg
 alt: "Ink sketch of a person in three-quarter profile with short spiky hair and a slight smile, on lined paper."
 medium: "Ink"
 tags: [hopeful]
-draft: true
 ---

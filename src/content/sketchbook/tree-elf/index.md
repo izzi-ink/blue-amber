@@ -6,7 +6,6 @@ image: ./image.jpg
 alt: "Acrylic painting of a pale face with large eyes and hair rising like bare branches."
 medium: "Acrylic on canvas"
 tags: [tree-elf]
-draft: true
 ---
 
 Acrylic on Canvas 2021

@@ -6,5 +6,4 @@ image: ./image.jpg
 alt: "Ink line drawing of a horse's head bowed low, with a wild curly mane and dense cross-hatching."
 medium: "Ink"
 tags: [equine, line-drawing]
-draft: true
 ---

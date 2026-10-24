@@ -6,5 +6,4 @@ image: ./image.jpg
 alt: "Circular ink chart with a hexagonal centre, its outer ring split into 24 segments coloured in navy, pink, teal and purple, with stars and bubbles."
 medium: "Ink and marker"
 tags: []
-draft: true
 ---

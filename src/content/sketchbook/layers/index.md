@@ -6,5 +6,4 @@ image: ./image.jpg
 alt: "Two faces drawn on overlapping translucent pages of a dotted notebook, the features of one showing through the other."
 medium: "Ink on tracing paper"
 tags: []
-draft: true
 ---

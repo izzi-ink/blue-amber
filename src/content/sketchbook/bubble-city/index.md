@@ -6,5 +6,4 @@ image: ./image.jpg
 alt: "Ink drawing on dotted paper of a map-like structure of round chambers, bridges and paths built from cells and bubbles."
 medium: "Ink"
 tags: []
-draft: true
 ---

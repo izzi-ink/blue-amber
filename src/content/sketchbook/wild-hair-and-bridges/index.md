@@ -6,5 +6,4 @@ image: ./image.jpg
 alt: "Ink drawing of a face with wild upswept hair, surrounded by bridges and walls built from cells and bubbles."
 medium: "Ink"
 tags: []
-draft: true
 ---

@@ -6,5 +6,4 @@ image: ./image.jpg
 alt: "Digital painting of a face with violet eyes and strong angular shading in reds and browns, against a dark background."
 medium: "Digital"
 tags: []
-draft: true
 ---

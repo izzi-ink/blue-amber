@@ -6,5 +6,4 @@ image: ./image.jpg
 alt: "Ink landscape doodle: a winding river leading to rounded mountain peaks topped with a cluster of bubbles."
 medium: "Ink"
 tags: [going-somewhere]
-draft: true
 ---

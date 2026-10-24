@@ -6,5 +6,4 @@ image: ./image.jpg
 alt: "A narrow painted bookmark on red fabric, decorated in white ink with a rocket, a planet and swirling wave patterns."
 medium: "White ink on painted card"
 tags: [bookmarks]
-draft: true
 ---

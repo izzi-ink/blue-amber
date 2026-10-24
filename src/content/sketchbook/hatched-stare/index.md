@@ -6,5 +6,4 @@ image: ./image.jpg
 alt: "Ink portrait of a face with wide staring eyes, scratchy hair and dense hatching around the head."
 medium: "Ink"
 tags: []
-draft: true
 ---

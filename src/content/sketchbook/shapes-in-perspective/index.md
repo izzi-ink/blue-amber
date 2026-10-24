@@ -6,5 +6,4 @@ image: ./image.jpg
 alt: "Pen sketches of three-dimensional forms: a box with two tubes running through it, a cube in perspective, and a ribbon curling into a scroll."
 medium: "Pen"
 tags: []
-draft: true
 ---

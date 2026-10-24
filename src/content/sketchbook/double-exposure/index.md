@@ -6,5 +6,4 @@ image: ./image.jpg
 alt: "Two overlapping sketches of the same face, slightly offset like a double exposure, tinted green."
 medium: "Ink"
 tags: []
-draft: true
 ---

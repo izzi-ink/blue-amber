@@ -6,5 +6,4 @@ image: ./image.jpg
 alt: "Pencil sketch of a bald figure with prominent ears and large round eyes, with half the face shaded."
 medium: "Pencil"
 tags: []
-draft: true
 ---

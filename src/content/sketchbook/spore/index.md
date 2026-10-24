@@ -6,5 +6,4 @@ image: ./image.jpg
 alt: "Delicate line drawing of a round spiked object, like a sea mine or a spore, trailing a chain of small bubbles."
 medium: "Ink"
 tags: []
-draft: true
 ---

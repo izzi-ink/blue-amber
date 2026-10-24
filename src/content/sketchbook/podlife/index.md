@@ -6,5 +6,4 @@ image: ./image.jpg
 alt: "Digital drawing of a round orange pod-like spacecraft with portholes, half submerged in teal water under a starry sky."
 medium: "Digital"
 tags: []
-draft: true
 ---

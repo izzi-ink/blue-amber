@@ -8,5 +8,4 @@ pencil: ./pencil.jpg
 pencilAlt: "The pencil version of the same face, in soft grey."
 medium: "Pencil, then digital colour"
 tags: []
-draft: true
 ---

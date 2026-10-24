@@ -6,5 +6,4 @@ image: ./image.jpg
 alt: "Ink drawing of a bowl patterned with hexagonal cells, sitting on wavy ground, with a teal ink wash spilling from one side."
 medium: "Ink and wash"
 tags: []
-draft: true
 ---

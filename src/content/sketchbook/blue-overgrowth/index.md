@@ -6,5 +6,4 @@ image: ./image.jpg
 alt: "Dense blue ink doodle of overlapping organic shapes: scales, bubbles, clouds and coral-like forms."
 medium: "Ink"
 tags: []
-draft: true
 ---

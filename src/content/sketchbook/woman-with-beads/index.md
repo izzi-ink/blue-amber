@@ -6,5 +6,4 @@ image: ./image.jpg
 alt: "Ink drawing of a woman with long dark hair and a string of beads, looking to one side, heavily cross-hatched."
 medium: "Ink"
 tags: []
-draft: true
 ---

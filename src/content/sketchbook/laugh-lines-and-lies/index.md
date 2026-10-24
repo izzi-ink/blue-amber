@@ -6,5 +6,4 @@ image: ./image.jpg
 alt: "Digital recolouring of the ink portrait of a woman with beads, the hatching in deep navy over peach."
 medium: "Digital, from ink"
 tags: []
-draft: true
 ---

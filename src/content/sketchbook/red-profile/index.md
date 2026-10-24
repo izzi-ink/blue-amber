@@ -6,5 +6,4 @@ image: ./image.jpg
 alt: "Red-brown ink sketch of a person in profile facing left, with short hair and a collar, against a frame with a hatched corner."
 medium: "Ink"
 tags: []
-draft: true
 ---

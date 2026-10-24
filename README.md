@@ -41,8 +41,7 @@ Same idea in `src/content/notes/<slug>/index.md`, with `title`, `date`, `descrip
 to set it as a poem.
 
 Set `draft: true` on any entry to hide it from the built site. Drafts still show (with a "draft" label) when you
-run `npm run dev`, so you can see them in place before publishing. The drawings imported from Instagram start out
-as drafts.
+run `npm run dev`, so you can see them in place before publishing.
 
 ## Commands
 

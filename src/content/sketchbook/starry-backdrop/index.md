@@ -6,5 +6,4 @@ image: ./image.jpg
 alt: "Pencil portrait of a bald head with wide eyes, in front of a rectangle scattered with outlined stars."
 medium: "Pencil"
 tags: []
-draft: true
 ---

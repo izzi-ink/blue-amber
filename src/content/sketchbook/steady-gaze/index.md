@@ -6,5 +6,4 @@ image: ./image.jpg
 alt: "Pencil portrait of a face looking straight out, with long wavy hair falling over the shoulders, on warm-toned paper."
 medium: "Pencil"
 tags: []
-draft: true
 ---

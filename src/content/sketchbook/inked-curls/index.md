@@ -6,5 +6,4 @@ image: ./image.jpg
 alt: "Ink portrait of a face with heavy-lidded eyes and full lips, framed by tight curls, on warm paper."
 medium: "Micron pen"
 tags: [ink-faces, micron]
-draft: true
 ---

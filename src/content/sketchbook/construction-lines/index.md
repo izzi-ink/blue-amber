@@ -6,5 +6,4 @@ image: ./image.jpg
 alt: "Light pencil sketch of a bald head facing forward, with the construction lines of the face still showing."
 medium: "Pencil"
 tags: []
-draft: true
 ---

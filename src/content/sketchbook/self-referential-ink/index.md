@@ -6,5 +6,4 @@ image: ./image.jpg
 alt: "Abstract ink doodle of stacked organic shapes: rings, cylinders, ripples and clusters of circles, like a strange sculpture."
 medium: "Ink"
 tags: [self-referential-ink, my-own-beauty]
-draft: true
 ---

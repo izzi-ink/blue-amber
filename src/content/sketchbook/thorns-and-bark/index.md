@@ -6,5 +6,4 @@ image: ./image.jpg
 alt: "Close-up ink drawing of a branching tree with thick, hatched bark and thorny twigs."
 medium: "Ink"
 tags: [thorns-and-bark]
-draft: true
 ---

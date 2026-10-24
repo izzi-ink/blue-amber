@@ -6,5 +6,4 @@ image: ./image.jpg
 alt: "Ink drawing of a hexagonal structure with spokes radiating out, the spaces filled with yellow-green clusters and dotted shading."
 medium: "Ink and wash"
 tags: []
-draft: true
 ---

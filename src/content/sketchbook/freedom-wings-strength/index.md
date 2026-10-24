@@ -6,5 +6,4 @@ image: ./image.jpg
 alt: "Ink drawing of a pair of wings attached to a heart-shaped token and a coin marked with a question mark, with banners reading \"freedom\", \"wings\" and \"strength\"."
 medium: "Ink"
 tags: [freedom]
-draft: true
 ---

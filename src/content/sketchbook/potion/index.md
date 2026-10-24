@@ -6,5 +6,4 @@ image: ./image.jpg
 alt: "Ink drawing of a corked potion bottle among rocks and crystals, over a watercolour wash in blue, purple and white."
 medium: "Ink and watercolour"
 tags: [alchemy]
-draft: true
 ---

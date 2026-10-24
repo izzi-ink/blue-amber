@@ -6,5 +6,4 @@ image: ./image.jpg
 alt: "Pencil portrait of a face looking straight out with wide eyes and heavy smudged shading down one side."
 medium: "Pencil"
 tags: []
-draft: true
 ---

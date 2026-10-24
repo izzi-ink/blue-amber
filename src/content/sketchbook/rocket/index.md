@@ -6,5 +6,4 @@ image: ./image.jpg
 alt: "Ink drawing of a rocket ship with chunky boosters, seen at an angle, over a pale green background."
 medium: "Ink"
 tags: [sci-fi]
-draft: true
 ---

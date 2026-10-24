@@ -6,5 +6,4 @@ image: ./image.jpg
 alt: "Ink drawing of a circular chart built around a hexagon, its spokes and rings softly washed in rainbow colours."
 medium: "Ink and wash"
 tags: [hexagonal]
-draft: true
 ---
