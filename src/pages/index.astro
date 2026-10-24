@@ -5,7 +5,8 @@ import NoteList from '../components/NoteList.astro';
 import { SITE } from '../lib/site';
 import { getNotes, getSketches } from '../lib/entries';
 
-const sketches = (await getSketches()).slice(0, 6);
+const sketches = (await getSketches('sketchbook')).slice(0, 6);
+const paintings = (await getSketches('paintbox')).slice(0, 3);
 const notes = (await getNotes()).slice(0, 3);
 ---
 
@@ -21,7 +22,7 @@ const notes = (await getNotes()).slice(0, 3);
       <a class="button" href="/sketchbook">Open the sketchbook</a>
       <a class="button button--ghost" href="/notes">Read the notes</a>
     </div>
-    <p class="hand hero__note" aria-hidden="true">mostly blue biro, occasionally a pencil, never finished</p>
+    <p class="hand hero__note" aria-hidden="true">mostly blue Bic, occasionally a pencil, never finished</p>
   </section>
 
   <section class="wrap wrap--wide section" aria-labelledby="latest">
@@ -31,6 +32,15 @@ const notes = (await getNotes()).slice(0, 3);
     </div>
     <SketchGrid sketches={sketches} />
     <p class="more"><a href="/sketchbook">Every page →</a></p>
+  </section>
+
+  <section class="wrap wrap--wide section" aria-labelledby="paintbox">
+    <div class="section__head">
+      <p class="label">Paintbox</p>
+      <h2 id="paintbox">Fresh from the paintbox</h2>
+    </div>
+    <SketchGrid sketches={paintings} />
+    <p class="more"><a href="/paintbox">All the colour →</a></p>
   </section>
 
   <section class="wrap wrap--wide section" aria-labelledby="notes">

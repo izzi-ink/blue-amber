@@ -5,6 +5,7 @@ description: "A tree elf, in paint."
 image: ./image.jpg
 alt: "Acrylic painting of a pale face with large eyes and hair rising like bare branches."
 medium: "Acrylic on canvas"
+category: paintbox
 tags: [tree-elf]
 ---
 

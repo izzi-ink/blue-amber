@@ -1,0 +1,38 @@
+---
+import Base from '../../layouts/Base.astro';
+import SketchGrid from '../../components/SketchGrid.astro';
+import { getSketches } from '../../lib/entries';
+import { SITE } from '../../lib/site';
+
+const sketches = await getSketches('paintbox');
+---
+
+<Base title="Paintbox" description="Where the doodles get colour: paint, washes, markers, mixed media and digital.">
+  <section class="wrap wrap--wide page">
+    <header class="page__header">
+      <p class="label">Paintbox</p>
+      <h1>Colour &amp; paint</h1>
+      <p class="lede">Where the doodles get colour: watercolour and washes, markers, acrylic, mixed media, and sketches finished in Procreate. Newest first. The pencil and ink live in the <a href="/sketchbook">Sketchbook</a>.</p>
+      <p class="hand note">more doodles on <a href={SITE.instagram}>Instagram @izzidoodles</a></p>
+    </header>
+    <SketchGrid sketches={sketches} />
+  </section>
+</Base>
+
+<style>
+  .page {
+    padding-top: var(--space-6);
+  }
+
+  .note {
+    font-size: var(--text-lg);
+    rotate: -1.5deg;
+    justify-self: start;
+  }
+
+  .page__header {
+    display: grid;
+    gap: var(--space-2);
+    margin-bottom: var(--space-5);
+  }
+</style>

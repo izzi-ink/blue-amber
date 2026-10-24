@@ -5,5 +5,6 @@ description: "A chart built on a hexagon."
 image: ./image.jpg
 alt: "Ink drawing of a circular chart built around a hexagon, its spokes and rings softly washed in rainbow colours."
 medium: "Ink and wash"
+category: paintbox
 tags: [hexagonal]
 ---

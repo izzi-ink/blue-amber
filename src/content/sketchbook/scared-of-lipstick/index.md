@@ -5,6 +5,7 @@ description: "Scared of lipstick"
 image: ./image.jpg
 alt: "Close-up from Orchid and Lily: a face with large green eyes and pale purple lips, in soft lilac washes."
 medium: "Digital"
+category: paintbox
 tags: []
 ---
 

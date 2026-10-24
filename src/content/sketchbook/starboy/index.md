@@ -5,6 +5,7 @@ description: "Starboy was bewildered befuddled as his smiles and kindness got sm
 image: ./image.jpg
 alt: "Doodle, finished digitally, of a worried-looking figure with curly dark hair, in front of a panel of white stars, with smudged pink paint on the chest."
 medium: "Doodle, scanned and finished in Procreate on iPad"
+category: paintbox
 tags: []
 ---
 

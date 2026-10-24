@@ -1,6 +1,6 @@
 import rss from '@astrojs/rss';
 import { SITE } from '../lib/site';
-import { getNotes, getSketches } from '../lib/entries';
+import { drawingHref, getNotes, getSketches } from '../lib/entries';
 
 export async function GET(context) {
   const notes = (await getNotes()).map((note) => ({
@@ -13,7 +13,7 @@ export async function GET(context) {
     title: sketch.data.title,
     description: sketch.data.description,
     pubDate: sketch.data.date,
-    link: `/sketchbook/${sketch.id}/`,
+    link: `${drawingHref(sketch)}/`,
   }));
   return rss({
     title: SITE.name,

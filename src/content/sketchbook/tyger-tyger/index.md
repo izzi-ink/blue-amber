@@ -5,5 +5,6 @@ description: "Tyger Tyger burning bright"
 image: ./image.jpg
 alt: "Ink and coloured marker tiger's face, with green eyes, drawn over the page of an old book, a white paint pen lying across it."
 medium: "Marker on a book page"
+category: paintbox
 tags: []
 ---

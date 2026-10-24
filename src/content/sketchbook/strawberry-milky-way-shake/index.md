@@ -5,5 +5,6 @@ description: "Strawberry Milkyway Shake"
 image: ./image.jpg
 alt: "Circular chart with a black hexagonal centre full of stars, surrounded by a ring of deep blue and bright pink galaxy segments."
 medium: "Ink and marker"
+category: paintbox
 tags: [star-charts]
 ---
