@@ -4,7 +4,7 @@ import SketchGrid from '../../components/SketchGrid.astro';
 import { getSketches } from '../../lib/entries';
 import { SITE } from '../../lib/site';
 
-const sketches = await getSketches('sketchbook');
+const sketches = await getSketches();
 ---
 
 <Base title="Sketchbook" description="Drawings from the Moleskine: pencil, Bic and ink.">
@@ -12,7 +12,7 @@ const sketches = await getSketches('sketchbook');
     <header class="page__header">
       <p class="label">Sketchbook</p>
       <h1>Doodles &amp; drawings</h1>
-      <p class="lede">Everything starts as a pencil sketch in a Moleskine. Some of it gets inked in blue Bic or black pen. Newest first. The colour lives in the <a href="/paintbox">Paintbox</a>.</p>
+      <p class="lede">Everything starts as a pencil sketch in a Moleskine. Some of it gets inked in blue Bic or black pen. Newest first.</p>
       <p class="hand note">more doodles on <a href={SITE.instagram}>Instagram @izzidoodles</a></p>
     </header>
     <SketchGrid sketches={sketches} />
