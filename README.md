@@ -35,9 +35,8 @@ A few words about it, if you like.
 
 Images can be any size or format; Astro resizes and compresses them at build time.
 
-Drawings go in the **Sketchbook** by default: pencil, Bic and single-colour ink. Work in colour (paint, washes,
-markers, mixed media, digital) belongs in the **Paintbox**; add `category: paintbox` to put it there. Both live in
-`src/content/sketchbook/`; only the page they show on changes.
+The Sketchbook is for pencil, Bic and monochrome ink drawings only. Old links to the retired Paintbox (colour work)
+redirect to the Sketchbook through `public/_redirects`.
 
 ## Adding a note
 

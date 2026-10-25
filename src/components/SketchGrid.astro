@@ -1,7 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import { Image } from 'astro:assets';
-import { drawingHref, finishLabel } from '../lib/entries';
 
 interface Props {
   sketches: CollectionEntry<'sketchbook'>[];
@@ -16,7 +15,7 @@ const tilts = ['-1.5deg', '1deg', '-0.5deg', '1.5deg', '-1deg', '0.5deg'];
   {
     sketches.map((sketch, i) => (
       <li class="card taped tilt" style={`--tilt: ${tilts[i % tilts.length]}`}>
-        <a href={drawingHref(sketch)}>
+        <a href={`/sketchbook/${sketch.id}`}>
           <Image
             src={sketch.data.image}
             alt={sketch.data.alt}
@@ -25,7 +24,7 @@ const tilts = ['-1.5deg', '1deg', '-0.5deg', '1.5deg', '-1deg', '0.5deg'];
           />
           <span class="hand sketch__title">{sketch.data.title}</span>
         </a>
-        {sketch.data.pencil && <span class="label sketch__flag">pencil → {finishLabel(sketch.data.medium)}</span>}
+        {sketch.data.pencil && <span class="label sketch__flag">pencil → ink</span>}
         {sketch.data.draft && <span class="label sketch__draft">draft</span>}
       </li>
     ))
